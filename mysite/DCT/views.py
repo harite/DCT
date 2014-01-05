@@ -5,7 +5,7 @@ from django.template import Context, loader, RequestContext
 from django.core.urlresolvers import reverse
 from django.template.context import RequestContext
 from DCT.models import Media
-from DCT.upload import MediaForm
+from DCT.forms import MediaForm
 
 # Create your views here.
 

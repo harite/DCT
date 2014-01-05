@@ -47,14 +47,20 @@ USE_I18N = True
 # calendars according to the current locale
 USE_L10N = True
 
+#fua add
+import os
+BASE_PATH = os.path.abspath(os.path.split(__file__)[0])
+
+
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = ''
+#fua write
+MEDIA_ROOT = os.path.join(BASE_PATH, 'static')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = '/media/'
+MEDIA_URL = '/home/project/DCT/mysite/'
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
