@@ -1,9 +1,9 @@
-from PIL import Image, ImageDraw, ImageFont, ImageEnhance
+import Image, ImageDraw, ImageFont, ImageEnhance
 import os, sys
  
 FONT = 'Arial.ttf'
  
-def add_watermark(in_file, text, out_file='watermark.jpg', angle=23, opacity=0.25):
+def add_watermark(in_file='./lena.jpg', text='aaa', out_file='watermark.jpg', angle=23, opacity=0.25):
     img = Image.open(in_file).convert('RGB')
     watermark = Image.new('RGBA', img.size, (0,0,0,0))
     size = 2
@@ -23,8 +23,7 @@ def add_watermark(in_file, text, out_file='watermark.jpg', angle=23, opacity=0.2
     watermark.putalpha(alpha)
     Image.composite(watermark, img, watermark).save(out_file, 'JPEG')
  
-if __name__ == '__main__':
-    if len(sys.argv) < 3:
-        sys.exit('Usage: %s <input-image> <text> <output-image> ' \
-                 '<angle> <opacity> ' % os.path.basename(sys.argv[0]))
-    add_watermark(*sys.argv[1:])
+    if __name__ == '__main__':
+        if len(sys.argv) < 3:
+            sys.exit('Usage: %s <input-image> <text> <output-image> <angle> <opacity> ' % os.path.basename(sys.argv[0]))
+        add_watermark(*sys.argv[1:])
