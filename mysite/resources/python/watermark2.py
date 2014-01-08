@@ -3,7 +3,7 @@ import os,sys
  
 FONT = '/usr/share/fonts/truetype/ttf-dejavu/DejaVuSans.ttf'
  
-def add_watermark(in_file, text, out_file ='watermark.jpg', angle=0, opacity=0.10):
+def add_watermark(in_file, text, out_file ='watermark.jpg', angle=0, opacity=1.00):
     img = Image.open(in_file).convert('RGB')
     watermark = Image.new('RGBA', img.size, (0,0,0,0))
     size = 2
