@@ -43,6 +43,7 @@ if __name__ == "__main__":
     o10 = ImageOps.grayscale(i10)
     o10.save("lena_gray_10.jpg")
 
+"""
     i20 = Image.open("lena_original_20.jpg")
     o20 = ImageOps.grayscale(i20)
     o20.save("lena_gray_20.jpg")
@@ -78,3 +79,4 @@ if __name__ == "__main__":
     i100 = Image.open("lena_original_100.jpg")
     o100 = ImageOps.grayscale(i100)
     o100.save("lena_gray_100.jpg")
+"""
